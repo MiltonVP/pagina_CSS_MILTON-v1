@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>LicorCR</title>
+  <style>
+    /* Estilos generales */
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Estilos de la cabecera */
+    .header {
+        background-color: #333;
+        color: white;
+        padding: 1rem 0;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav-list {
+        list-style: none;
+        display: flex;
+    }
+
+    .nav-list li {
+        margin-left: 1.5rem;
+    }
+
+    .nav-list li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Estilos del contenido principal */
+    .main-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .section {
+        margin-bottom: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .section-text {
+        font-size: 1rem;
+    }
+
+    .product {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .product img {
+        max-width: 100%;
+    }
+
+    .product-title {
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+    }
+
+    .product-description {
+        font-size: 1rem;
+    }
+
+    /* Estilos del pie de página */
+    .footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .news-section {
+      background-color: #f7fafc;
+      padding: 4rem 0;
+    }
+
+    .news-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .news-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .news-description {
+      font-size: 1.1rem;
+      color: #6b7280;
+      margin-bottom: 2rem;
+    }
+
+    .subscribe-form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .subscribe-input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.25rem;
+    }
+
+    .subscribe-button {
+      display: inline-block;
+      background-color: #4a90e2;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    .banner {
+      background-color: #4a90e2;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .banner-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .banner-description {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .banner-button {
+      display: inline-block;
+      background-color: white;
+      color: #4a90e2;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .banner-button:hover {
+      background-color: #e2e8f0;
+      color: #4a90e2;
+    }
+
+    .contact-section {
+      background-color: #f7fafc;
+      padding: 4rem 0;
+    }
+
+    .contact-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .contact-description {
+      font-size: 1.1rem;
+      color: #6b7280;
+      margin-bottom: 2rem;
+    }
+
+    .contact-form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .contact-input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.25rem;
+      height: 150px;
+      resize: none;
+      margin-bottom: 1rem;
+    }
+
+    .contact-button {
+      display: inline-block;
+      background-color: #4a90e2;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      border: none;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="#" class="logo">LicorCR</a>
+      <ul class="nav-list">
+        <li><a href="#newsletter">Noticias</a></li>
+        <li><a href="#about-us">Sobre Nosotros</a></li>
+        <li><a href="#products">Productos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-content">
+    <div class="banner">
+      <h2 class="banner-title">¡Oferta Especial!</h2>
+      <p class="banner-description">Obtén un descuento del 20% en todos los productos esta semana.</p>
+      <a href="#products" class="banner-button">Ver Productos</a>
+    </div>
+    <section id="newsletter" class="news-section">
+      <div class="news-container">
+        <h2 class="news-title">Últimas Noticias</h2>
+        <p class="news-description">Mantente al día con nuestras últimas noticias y actualizaciones.</p>
+        <form class="subscribe-form">
+          <input type="email" class="subscribe-input" placeholder="Ingresa tu correo electrónico">
+          <button type="submit" class="subscribe-button">Suscribirse</button>
+        </form>
+      </div>
+    </section>
+    <section id="about-us" class="section">
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <p class="section-text">Ofrecemos una amplia gama de servicios de alta calidad para satisfacer tus necesidades.</p>
+    </section>
+    <section id="products" class="section">
+      <h2 class="section-title">Últimos Productos</h2>
+      <div class="product">
+        <img src="https://vinumcr.com/wp-content/uploads/2020/06/1217090-Johnnie-Walker-Blue-Label-Whisky-4.jpg" alt="Producto 1">
+        <h3 class="product-title">Blue Label</h3>
+        <p class="product-description">De Jhonny Walker, Botella de 1L, es un elixir...</p>
+      </div>
+      <div class="product">
+        <img src="https://vinumcr.com/wp-content/uploads/2020/06/1217090-Johnnie-Walker-Blue-Label-Whisky-4.jpg" alt="Producto 2">
+        <h3 class="product-title">Blue Label</h3>
+        <p class="product-description">De Jhonny Walker, Botella de 1L, es un elixir...</p>
+      </div>
+    </section>
+    <section id="contact" class="contact-section">
+      <div class="contact-container">
+        <h2 class="contact-title">Contáctanos</h2>
+        <p class="contact-description">Si tienes alguna pregunta o comentario, ¡no dudes en contactarnos!</p>
+        <form class="contact-form">
+          <input type="text" class="contact-input" placeholder="Nombre">
+          <input type="email" class="contact-input" placeholder="Correo electrónico">
+          <textarea class="contact-textarea" placeholder="Mensaje"></textarea>
+          <button type="submit" class="contact-button">Enviar Mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2023 LicorCR. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
